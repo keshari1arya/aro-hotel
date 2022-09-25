@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44416",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "/Users/arya/Projects/aro-hotel/aro-hotel.UI/ClientApp/",
+"MaxTimeoutInSeconds": "120"
+}
+}

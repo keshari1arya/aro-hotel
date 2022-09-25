@@ -1,0 +1,15 @@
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/bin/Debug/net6.0/aro-hotel.Infrastructure.deps.json
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/bin/Debug/net6.0/aro-hotel.Infrastructure.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/bin/Debug/net6.0/aro-hotel.Infrastructure.pdb
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/bin/Debug/net6.0/aro-hotel.Domain.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/bin/Debug/net6.0/aro-hotel.Domain.pdb
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.csproj.AssemblyReference.cache
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.AssemblyInfoInputs.cache
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.AssemblyInfo.cs
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.csproj.CopyComplete
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/refint/aro-hotel.Infrastructure.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/aro-hotel.Infrastructure.pdb
+/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/Debug/net6.0/ref/aro-hotel.Infrastructure.dll

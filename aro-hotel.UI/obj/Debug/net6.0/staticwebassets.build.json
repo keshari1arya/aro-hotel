@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "nYsdMvlKcuAiaCM18hFbZat/W0N9AKWh3GFcHDp9hBg=",
+  "Source": "aro-hotel.UI",
+  "BasePath": "_content/aro-hotel.UI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "aro-hotel.UI/wwwroot",
+      "Source": "aro-hotel.UI",
+      "ContentRoot": "/Users/arya/Projects/aro-hotel/aro-hotel.UI/wwwroot/",
+      "BasePath": "_content/aro-hotel.UI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/arya/Projects/aro-hotel/aro-hotel.UI/wwwroot/favicon.ico",
+      "SourceId": "aro-hotel.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/arya/Projects/aro-hotel/aro-hotel.UI/wwwroot/",
+      "BasePath": "_content/aro-hotel.UI",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    }
+  ]
+}

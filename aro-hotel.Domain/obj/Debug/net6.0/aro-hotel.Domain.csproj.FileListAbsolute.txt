@@ -1,0 +1,12 @@
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/bin/Debug/net6.0/aro-hotel.Domain.deps.json
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/bin/Debug/net6.0/aro-hotel.Domain.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/bin/Debug/net6.0/aro-hotel.Domain.pdb
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.csproj.AssemblyReference.cache
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.AssemblyInfoInputs.cache
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.AssemblyInfo.cs
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.csproj.CoreCompileInputs.cache
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/refint/aro-hotel.Domain.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/aro-hotel.Domain.pdb
+/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/Debug/net6.0/ref/aro-hotel.Domain.dll

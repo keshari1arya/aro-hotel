@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aro-hotel.Domain", "aro-hotel.Domain\aro-hotel.Domain.csproj", "{8E793499-4351-4D5E-91D9-586CEB4F4830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aro-hotel.Infrastructure", "aro-hotel.Infrastructure\aro-hotel.Infrastructure.csproj", "{3CB8D5D3-9067-4493-BD5A-E6C08AC1C664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aro-hotel.UI", "aro-hotel.UI\aro-hotel.UI.csproj", "{2376FBA8-5646-4BC0-A908-E248FDD1D96B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77DA0AFA-3AE5-4489-907D-C3FE92F936A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77DA0AFA-3AE5-4489-907D-C3FE92F936A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77DA0AFA-3AE5-4489-907D-C3FE92F936A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77DA0AFA-3AE5-4489-907D-C3FE92F936A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E793499-4351-4D5E-91D9-586CEB4F4830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E793499-4351-4D5E-91D9-586CEB4F4830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E793499-4351-4D5E-91D9-586CEB4F4830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E793499-4351-4D5E-91D9-586CEB4F4830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CB8D5D3-9067-4493-BD5A-E6C08AC1C664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CB8D5D3-9067-4493-BD5A-E6C08AC1C664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CB8D5D3-9067-4493-BD5A-E6C08AC1C664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CB8D5D3-9067-4493-BD5A-E6C08AC1C664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2376FBA8-5646-4BC0-A908-E248FDD1D96B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2376FBA8-5646-4BC0-A908-E248FDD1D96B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2376FBA8-5646-4BC0-A908-E248FDD1D96B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2376FBA8-5646-4BC0-A908-E248FDD1D96B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

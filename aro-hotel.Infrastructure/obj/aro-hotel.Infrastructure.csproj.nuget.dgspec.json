@@ -1,0 +1,142 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/aro-hotel.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/Users/arya/Projects/aro-hotel/aro-hotel.Domain/aro-hotel.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/arya/Projects/aro-hotel/aro-hotel.Domain/aro-hotel.Domain.csproj",
+        "projectName": "aro-hotel.Domain",
+        "projectPath": "/Users/arya/Projects/aro-hotel/aro-hotel.Domain/aro-hotel.Domain.csproj",
+        "packagesPath": "/Users/arya/.nuget/packages/",
+        "outputPath": "/Users/arya/Projects/aro-hotel/aro-hotel.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/arya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/aro-hotel.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/aro-hotel.Infrastructure.csproj",
+        "projectName": "aro-hotel.Infrastructure",
+        "projectPath": "/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/aro-hotel.Infrastructure.csproj",
+        "packagesPath": "/Users/arya/.nuget/packages/",
+        "outputPath": "/Users/arya/Projects/aro-hotel/aro-hotel.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/arya/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/arya/Projects/aro-hotel/aro-hotel.Domain/aro-hotel.Domain.csproj": {
+                "projectPath": "/Users/arya/Projects/aro-hotel/aro-hotel.Domain/aro-hotel.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[11.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

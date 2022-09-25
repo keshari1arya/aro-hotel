@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>aro_hotel.Infrastructure</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repository\" />
+    <None Remove="Query\" />
+    <None Remove="MediatR" />
+    <None Remove="DTO\" />
+    <None Remove="DTO\Response\" />
+    <None Remove="AutoMapper" />
+    <None Remove="Handler\" />
+    <None Remove="Handler\Query\" />
+    <None Remove="MappingProfile\" />
+    <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+    <None Remove="Handler\Command\" />
+    <None Remove="DTO\Request\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+    <Folder Include="Query\" />
+    <Folder Include="DTO\" />
+    <Folder Include="DTO\Response\" />
+    <Folder Include="Handler\" />
+    <Folder Include="Handler\Query\" />
+    <Folder Include="MappingProfile\" />
+    <Folder Include="Handler\Command\" />
+    <Folder Include="DTO\Request\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\aro-hotel.Domain\aro-hotel.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+</Project>
