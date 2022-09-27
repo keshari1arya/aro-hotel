@@ -13,7 +13,6 @@ namespace aro_hotel.Web.Controllers
     [Route("[controller]")]
     public class HotelController : ControllerBase
     {
-        public IRepository<Hotel> drugRepository { get; }
 
         private readonly IMediator _mediatR;
 
@@ -32,7 +31,8 @@ namespace aro_hotel.Web.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetByIdAsync(int id)
         {
-            return Ok(await this.drugRepository.GetByIdAsync(id));
+            var query = new GetHotelDetailsQuery(id);
+            return Ok(await this._mediatR.Send(query));
         }
 
         [HttpPost]

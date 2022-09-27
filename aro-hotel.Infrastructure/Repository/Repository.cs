@@ -7,8 +7,8 @@ namespace aro_hotel.Infrastructure.Repository
 {
     public class Repository<T> : IRepository<T> where T : Entity
     {
-        private readonly HotelContext _context;
-        private readonly DbSet<T> _entities;
+        internal readonly HotelContext _context;
+        public readonly DbSet<T> _entities;
 
         public Repository(HotelContext context)
         {
@@ -30,6 +30,10 @@ namespace aro_hotel.Infrastructure.Repository
 
         public async Task<T> FindByConditionAsync(Expression<Func<T, bool>> predicate) => await _context.Set<T>().FirstOrDefaultAsync(predicate);
 
+        public DbSet<T> Entity()
+        {
+            return _entities;
+        }
     }
 }
 

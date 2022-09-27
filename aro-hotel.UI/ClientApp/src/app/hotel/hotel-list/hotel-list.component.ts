@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Hotel } from 'src/app/infrastructure/models/hotel';
+import { Hotel, IAddress } from 'src/app/infrastructure/models/hotel';
 import { HotelService } from 'src/app/services/hotel.service';
 
 @Component({
@@ -18,4 +18,7 @@ export class HotelListComponent implements OnInit {
       })
   }
 
+  getAddressString(address:IAddress):string{
+   return `${address.line1}, ${address.city}, ${address.state}`
+  }
 }

@@ -11,6 +11,7 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HotelListComponent } from './hotel/hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
+import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.compo
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    NgbCarouselModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HotelListComponent, pathMatch: 'full' },
+      { path: '', component: HotelDetailsComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])

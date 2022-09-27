@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using aro_hotel.Domain.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace aro_hotel.Infrastructure.Repository
 {
@@ -13,6 +14,7 @@ namespace aro_hotel.Infrastructure.Repository
         Task Add(T entity);
         Task SaveChangesAsync();
         Task<T> FindByConditionAsync(Expression<Func<T, bool>> predicate);
+        DbSet<T> Entity();
     }
 }
 
