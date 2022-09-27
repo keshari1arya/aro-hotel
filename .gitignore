@@ -61,3 +61,4 @@ baseline.json
 
 .angular/
 aro-hotel.UI/bin/
+node_modules/
