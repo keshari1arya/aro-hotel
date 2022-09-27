@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "aro_hotel.UI"
+  "defaultProject": "aro_hotel.UI",
+  "cli": {
+    "analytics": "f9558d38-b4c7-4566-a6bc-7ed6731644a5"
+  }
 }
