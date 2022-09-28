@@ -29,7 +29,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HotelDetailsComponent, pathMatch: 'full' },
+      { path: '', component: HotelListComponent, pathMatch: 'full' },
+      { path: 'details', component: HotelDetailsComponent },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])

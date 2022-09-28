@@ -15,7 +15,8 @@ namespace aro_hotel.Infrastructure.MappingProfile
             CreateMap<Address, AddressResponse>();
             CreateMap<Multimedia, MultimediaResponse>();
             CreateMap<Room, RoomResponse>()
-                .ForMember(de => de.RoomType, con => con.MapFrom(src => src.RoomType.Type));
+                .ForMember(de => de.RoomType, con => con.MapFrom(src => src.RoomType.Type))
+                .ForMember(x => x.Facilities, con => con.MapFrom(x => x.RoomFacilityXREFs.Select(x => x.Facility.Name).ToList()));
 
 
             CreateMap<HotelRequest, Hotel>()

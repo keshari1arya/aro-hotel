@@ -1,11 +1,33 @@
 <ngb-carousel>
-    <ng-template ngbSlide *ngFor="let image of images">
+    <ng-template ngbSlide *ngFor="let image of hotel?.multimedias">
         <div class="picsum-img-wrapper">
-            <img [src]="image" alt="Random first slide" class="fit-image">
+
+            <img [src]="getImage(image)" alt="Random first slide" class="fit-image">
         </div>
         <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            <h3>{{hotel?.name}}</h3>
+
         </div>
     </ng-template>
 </ngb-carousel>
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-6" *ngFor="let room of hotel?.rooms">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Occupancy: {{room?.occupancy}}</strong>
+                    <h4 class="mb-0">{{room?.roomType}}</h4>
+                    <div class="mb-1 text-muted">Facilities:</div>
+                    <p class="card-text mb-auto facility">
+                        {{room.facilities?.toString()}}
+                    </p>
+                    <a href="#" class="stretched-link">Book Now</a>
+                </div>
+                <div class="col-auto d-none d-lg-block room-img-container">
+                    <img [src]="getImage(room.multimedias[0])" alt="loading...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

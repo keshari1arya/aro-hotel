@@ -5,6 +5,7 @@
         public string RoomType { get; set; }
         public int Occupancy { get; set; }
         public List<MultimediaResponse> Multimedias { get; set; }
+        public List<string> Facilities { get; internal set; }
     }
 }
 

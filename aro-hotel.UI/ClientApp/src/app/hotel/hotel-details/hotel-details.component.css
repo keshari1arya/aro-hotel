@@ -3,3 +3,27 @@
     width: 100%;
     object-fit: cover;
 }
+.container{
+    margin-top: 50px;
+}
+
+.room-img-container{
+    width: 205px;
+    height: 253px;
+    overflow: hidden;
+    display: flex !important;
+}
+
+.room-img-container img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.facility{
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+}

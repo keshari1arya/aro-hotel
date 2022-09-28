@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Igk43oQR/0eNQIlvrahVo+hRrHMl1L/ngm1bBWUPj04BeLbCdxSeedVNjdl3r8Gp0mYe/MlJ4O/eBSZgkQGKSQ==",
+  "dgSpecHash": "C+BzwNAYxvn/qRuTIp7uAMDhXfpnaJtrWLjIIztMgHBvlbY0Aa71XDgJIuOvwPGk51p+rHCy/TUFbNng1p3+JQ==",
   "success": true,
   "projectFilePath": "/Users/arya/Projects/aro-hotel/aro-hotel.UI/aro-hotel.UI.csproj",
   "expectedPackageFiles": [
     "/Users/arya/.nuget/packages/automapper/11.0.1/automapper.11.0.1.nupkg.sha512",
     "/Users/arya/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "/Users/arya/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/arya/.nuget/packages/mediatr/10.0.1/mediatr.10.0.1.nupkg.sha512",
     "/Users/arya/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/Users/arya/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.1/mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
@@ -16,6 +17,7 @@
     "/Users/arya/.nuget/packages/microsoft.entityframeworkcore/6.0.9/microsoft.entityframeworkcore.6.0.9.nupkg.sha512",
     "/Users/arya/.nuget/packages/microsoft.entityframeworkcore.abstractions/6.0.9/microsoft.entityframeworkcore.abstractions.6.0.9.nupkg.sha512",
     "/Users/arya/.nuget/packages/microsoft.entityframeworkcore.analyzers/6.0.9/microsoft.entityframeworkcore.analyzers.6.0.9.nupkg.sha512",
+    "/Users/arya/.nuget/packages/microsoft.entityframeworkcore.design/6.0.9/microsoft.entityframeworkcore.design.6.0.9.nupkg.sha512",
     "/Users/arya/.nuget/packages/microsoft.entityframeworkcore.inmemory/6.0.9/microsoft.entityframeworkcore.inmemory.6.0.9.nupkg.sha512",
     "/Users/arya/.nuget/packages/microsoft.entityframeworkcore.relational/6.0.9/microsoft.entityframeworkcore.relational.6.0.9.nupkg.sha512",
     "/Users/arya/.nuget/packages/microsoft.entityframeworkcore.sqlserver/6.0.9/microsoft.entityframeworkcore.sqlserver.6.0.9.nupkg.sha512",

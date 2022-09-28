@@ -80,3 +80,5 @@
 /Users/arya/Projects/aro-hotel/aro-hotel.UI/obj/Debug/net6.0/aro-hotel.UI.pdb
 /Users/arya/Projects/aro-hotel/aro-hotel.UI/obj/Debug/net6.0/aro-hotel.UI.genruntimeconfig.cache
 /Users/arya/Projects/aro-hotel/aro-hotel.UI/obj/Debug/net6.0/ref/aro-hotel.UI.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.UI/bin/Debug/net6.0/Humanizer.dll
+/Users/arya/Projects/aro-hotel/aro-hotel.UI/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll

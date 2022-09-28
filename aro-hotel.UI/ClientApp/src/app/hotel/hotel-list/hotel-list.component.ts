@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Hotel, IAddress } from 'src/app/infrastructure/models/hotel';
+import { Hotel } from 'src/app/infrastructure/models/hotel';
+import { IAddress } from "src/app/infrastructure/models/IAddress";
 import { HotelService } from 'src/app/services/hotel.service';
 
 @Component({
