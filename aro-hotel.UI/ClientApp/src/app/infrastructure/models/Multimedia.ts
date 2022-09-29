@@ -1,5 +1,5 @@
 
 export interface Multimedia {
-    type: number;
-    url: string;
+    type?: number;
+    url?: string;
 }

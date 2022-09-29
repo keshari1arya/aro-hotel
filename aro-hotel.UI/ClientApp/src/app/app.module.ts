@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
-
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
@@ -12,6 +11,10 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HotelListComponent } from './hotel/hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './state/app.reducers';
+import { AppEffects } from './state/app.effects';
+import {EffectsModule} from '@ngrx/effects';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,11 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
       { path: 'details', component: HotelDetailsComponent },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-    ])
+    ]),
+    StoreModule.forRoot({}),
+  EffectsModule.forRoot([]),
+    StoreModule.forFeature("AppState", appReducer),
+    EffectsModule.forFeature([AppEffects]),
   ],
   providers: [],
   bootstrap: [AppComponent]
