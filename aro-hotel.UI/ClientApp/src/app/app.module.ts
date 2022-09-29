@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
@@ -14,7 +14,8 @@ import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
 import { StoreModule } from '@ngrx/store';
 import { appReducer } from './state/app.reducers';
 import { AppEffects } from './state/app.effects';
-import {EffectsModule} from '@ngrx/effects';
+import { EffectsModule } from '@ngrx/effects';
+import { LoaderInterceptor } from './interceptor/loader.interceptor';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import {EffectsModule} from '@ngrx/effects';
     CounterComponent,
     FetchDataComponent,
     HotelListComponent,
-    HotelDetailsComponent
+    HotelDetailsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -38,12 +39,17 @@ import {EffectsModule} from '@ngrx/effects';
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
     StoreModule.forRoot({}),
-  EffectsModule.forRoot([]),
-    StoreModule.forFeature("AppState", appReducer),
+    EffectsModule.forRoot([]),
+    StoreModule.forFeature('AppState', appReducer),
     EffectsModule.forFeature([AppEffects]),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoaderInterceptor,
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
-
+export class AppModule {}
