@@ -3,6 +3,7 @@ import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Hotel } from 'src/app/infrastructure/models/hotel';
 import { IAddress } from 'src/app/infrastructure/models/IAddress';
+import { Multimedia } from 'src/app/infrastructure/models/Multimedia';
 import { HotelService } from 'src/app/services/hotel.service';
 import { IAppState } from 'src/app/state/app.index';
 import * as AppActions from '../../state/app.actions';
@@ -17,12 +18,19 @@ export class HotelListComponent implements OnInit {
   hotels?: Observable<Hotel[] | undefined> = new Observable();
   constructor(private appStore: Store<IAppState>) {}
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
     this.appStore.dispatch(AppActions.getHotels());
     this.hotels = this.appStore.pipe(select(fromApp.selectHotels));
   }
 
   getAddressString(address?: IAddress): string {
     return `${address?.line1}, ${address?.city}, ${address?.state}`;
+  }
+
+  getImage(hotel: Hotel): string {
+    if(hotel?.multimedias[0]?.url){
+      return hotel.multimedias[0].url;
+    }
+    return 'https://icon-library.com/images/no-picture-available-icon/no-picture-available-icon-12.jpg';
   }
 }

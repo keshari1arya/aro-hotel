@@ -1,7 +1,22 @@
-.card-text{
-    text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+.card-text {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fit-image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: #6c757d;
+  text-decoration: auto;
+}
+
+a:hover {
+  color: #6c757d;
 }

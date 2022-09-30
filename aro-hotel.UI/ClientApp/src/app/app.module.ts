@@ -34,7 +34,7 @@ import { LoaderInterceptor } from './interceptor/loader.interceptor';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HotelListComponent, pathMatch: 'full' },
-      { path: 'details', component: HotelDetailsComponent },
+      { path: 'details/:id', component: HotelDetailsComponent },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
