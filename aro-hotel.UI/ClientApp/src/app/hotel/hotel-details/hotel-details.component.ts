@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { select, Store } from '@ngrx/store';
-
 import { Observable } from 'rxjs';
 import { Hotel } from 'src/app/infrastructure/models/hotel';
 import { Multimedia } from 'src/app/infrastructure/models/Multimedia';
-import { HotelService } from 'src/app/services/hotel.service';
 import { IAppState } from 'src/app/state/app.index';
 import * as AppActions from '../../state/app.actions';
 import * as fromApp from '../../state/app.index';
@@ -17,14 +16,16 @@ import * as fromApp from '../../state/app.index';
 export class HotelDetailsComponent implements OnInit {
   hotel$?: Observable<Hotel | undefined>;
 
-  constructor(private appStore: Store<IAppState>) {}
+  constructor(private appStore: Store<IAppState>, private route: ActivatedRoute,) { }
 
-  ngOnInit(): void {
-    this.appStore.dispatch(AppActions.getHotelDetails({ id: 1 }));
+  ngOnInit() {
+    this.route.params.subscribe(params => {
+      this.appStore.dispatch(AppActions.getHotelDetails({ id: params.id }));
+    });
     this.hotel$ = this.appStore.pipe(select(fromApp.selectHotelDetails));
   }
 
   getImage(image: Multimedia): string {
-    return image?.url ?? '';
+    return image?.url ?? 'https://icon-library.com/images/no-picture-available-icon/no-picture-available-icon-12.jpg';
   }
 }

@@ -8,6 +8,7 @@ namespace aro_hotel.Infrastructure.DTO.Response
         public int Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+        public int Discount { get; set; }
         public AddressResponse Address { get; set; }
         public string Phone { get; set; }
         public List<MultimediaResponse> Multimedias { get; set; }
