@@ -5,9 +5,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { HotelListComponent } from './hotel/hotel-list/hotel-list.component';
 import { HotelDetailsComponent } from './hotel/hotel-details/hotel-details.component';
 import { NgbCarouselModule } from '@ng-bootstrap/ng-bootstrap';
@@ -21,9 +18,6 @@ import { LoaderInterceptor } from './interceptor/loader.interceptor';
   declarations: [
     AppComponent,
     NavMenuComponent,
-    HomeComponent,
-    CounterComponent,
-    FetchDataComponent,
     HotelListComponent,
     HotelDetailsComponent,
   ],
@@ -35,8 +29,6 @@ import { LoaderInterceptor } from './interceptor/loader.interceptor';
     RouterModule.forRoot([
       { path: '', component: HotelListComponent, pathMatch: 'full' },
       { path: 'details/:id', component: HotelDetailsComponent },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
     ]),
     StoreModule.forRoot({}),
     EffectsModule.forRoot([]),

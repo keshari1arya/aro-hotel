@@ -16,6 +16,8 @@ import * as fromApp from '../../state/app.index';
 export class HotelDetailsComponent implements OnInit {
   hotel$?: Observable<Hotel | undefined>;
 
+  private notFoundImage = 'assets/not-found.jpeg';
+
   constructor(private appStore: Store<IAppState>, private route: ActivatedRoute,) { }
 
   ngOnInit() {
@@ -26,6 +28,6 @@ export class HotelDetailsComponent implements OnInit {
   }
 
   getImage(image: Multimedia): string {
-    return image?.url ?? 'https://icon-library.com/images/no-picture-available-icon/no-picture-available-icon-12.jpg';
+    return image?.url ?? this.notFoundImage;
   }
 }
