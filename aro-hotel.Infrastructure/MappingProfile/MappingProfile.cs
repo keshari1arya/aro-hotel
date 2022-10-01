@@ -21,17 +21,9 @@ namespace aro_hotel.Infrastructure.MappingProfile
 
             CreateMap<HotelRequest, Hotel>()
                 .ForMember(de => de.Id, con => con.MapFrom(src => src.Id ?? 0))
-                .ForMember(de => de.Address, con => con.MapFrom(src => new Address
-                {
-                    City = src.City,
-                    Country = src.Country,
-                    Id = src.Id ?? 0,
-                    LandMark = src.LandMark,
-                    Line1 = src.Line1,
-                    Line2 = src.Line2,
-                    State = src.State,
-                    Pincode = src.Pincode
-                }));
+                .ForMember(de => de.Address, con => con.MapFrom(src => src.Address));
+
+            CreateMap<AddressRequest, Address>();
 
         }
 

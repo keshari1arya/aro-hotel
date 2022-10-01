@@ -1,15 +1,15 @@
 import { IAddress } from "./IAddress";
-import { Multimedia } from "./Multimedia";
-import { Room } from "./Room";
+import { IMultimedia } from "./Multimedia";
+import { IRoom } from "./Room";
 
-export interface Hotel {
+export interface IHotel {
   id?: number;
   name?: string;
   description?: string;
   address?: IAddress;
   phone?: string;
-  multimedias?: Multimedia[],
-  rooms?: Room[],
+  multimedias?: IMultimedia[],
+  rooms?: IRoom[],
   facilities?: string[],
   discount?: number;
 }

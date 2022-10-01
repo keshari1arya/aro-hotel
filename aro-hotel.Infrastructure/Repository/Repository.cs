@@ -24,7 +24,7 @@ namespace aro_hotel.Infrastructure.Repository
 
         public async Task<T> GetByIdAsync(int id) => await _entities.SingleOrDefaultAsync(s => s.Id == id);
 
-        public async Task Add(T entity) => await _entities.AddAsync(entity);
+        public async Task AddAsync(T entity) => await _entities.AddAsync(entity);
 
         public async Task SaveChangesAsync() => await _context.SaveChangesAsync();
 

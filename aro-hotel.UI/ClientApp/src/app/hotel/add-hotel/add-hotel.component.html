@@ -1,0 +1,85 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row g-3 needs-validation">
+    <div class="col-md-4">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" formControlName="name" value="Mark" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="phone" class="form-label">Phone</label>
+      <div class="input-group has-validation">
+        <!-- <span class="input-group-text" formControlName="inputGroupPrepend">@</span> -->
+        <input type="text" class="form-control" formControlName="phone" aria-describedby="inputGroupPrepend" required>
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="line1" class="form-label">Line 1</label>
+      <input type="text" class="form-control" formControlName="line1" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="line2" class="form-label">Line 2</label>
+      <input type="text" class="form-control" formControlName="line2" required>
+      <div class="invalid-feedback">
+        Please provide a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="city" class="form-label">City</label>
+      <input class="form-control" formControlName="city" required>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="state" class="form-label">State</label>
+      <input class="form-control" formControlName="state" required>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="country" class="form-label">Country</label>
+      <input class="form-control" formControlName="country" required>
+      <div class="invalid-feedback">
+        Please select a valid state.
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <label for="pincode" class="form-label">Landmark</label>
+      <input type="text" class="form-control" formControlName="pincode" required>
+      <div class="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
+    <div class="col-md-12">
+      <label for="description" class="form-label">Description</label>
+      <textarea type="text" class="form-control" formControlName="description" value="Otto" required></textarea>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" formControlName="acknowledge" required>
+        <label class="form-check-label" for="acknowledge">
+          Agree to terms and conditions
+        </label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>

@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Hotel } from 'src/app/infrastructure/models/hotel';
-import { Multimedia } from 'src/app/infrastructure/models/Multimedia';
+import { IHotel } from 'src/app/infrastructure/models/hotel';
+import { IMultimedia } from 'src/app/infrastructure/models/Multimedia';
 import { IAppState } from 'src/app/state/app.index';
 import * as AppActions from '../../state/app.actions';
 import * as fromApp from '../../state/app.index';
@@ -14,7 +14,7 @@ import * as fromApp from '../../state/app.index';
   styleUrls: ['./hotel-details.component.css'],
 })
 export class HotelDetailsComponent implements OnInit {
-  hotel$?: Observable<Hotel | undefined>;
+  hotel$?: Observable<IHotel | undefined>;
 
   private notFoundImage = 'assets/not-found.jpeg';
 
@@ -27,7 +27,7 @@ export class HotelDetailsComponent implements OnInit {
     this.hotel$ = this.appStore.pipe(select(fromApp.selectHotelDetails));
   }
 
-  getImage(image: Multimedia): string {
+  getImage(image: IMultimedia): string {
     return image?.url ?? this.notFoundImage;
   }
 }

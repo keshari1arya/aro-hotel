@@ -1,10 +1,8 @@
-import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Hotel } from 'src/app/infrastructure/models/hotel';
+import { IHotel } from 'src/app/infrastructure/models/hotel';
 import { IAddress } from 'src/app/infrastructure/models/IAddress';
-import { Multimedia } from 'src/app/infrastructure/models/Multimedia';
-import { HotelService } from 'src/app/services/hotel.service';
 import { IAppState } from 'src/app/state/app.index';
 import * as AppActions from '../../state/app.actions';
 import * as fromApp from '../../state/app.index';
@@ -15,7 +13,7 @@ import * as fromApp from '../../state/app.index';
   styleUrls: ['./hotel-list.component.css'],
 })
 export class HotelListComponent implements OnInit {
-  hotels?: Observable<Hotel[] | undefined> = new Observable();
+  hotels?: Observable<IHotel[] | undefined> = new Observable();
 
   private notFoundImage = 'assets/not-found.jpeg';
 
@@ -30,7 +28,7 @@ export class HotelListComponent implements OnInit {
     return `${address?.line1}, ${address?.city}, ${address?.state}`;
   }
 
-  getImage(hotel: Hotel): string {
+  getImage(hotel: IHotel): string {
       return hotel.multimedias[0]?.url ?? this.notFoundImage;
   }
 }

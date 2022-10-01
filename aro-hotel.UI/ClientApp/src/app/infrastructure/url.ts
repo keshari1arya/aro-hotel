@@ -1,3 +1,7 @@
+const endPoints = {
+  hotel: 'hotel',
+}
 export const ApiUrls = {
-    getHotels: 'hotel'
+  getHotels: endPoints.hotel,
+  createHotel: endPoints.hotel,
 }

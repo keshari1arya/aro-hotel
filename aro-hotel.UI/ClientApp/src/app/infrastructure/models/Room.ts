@@ -1,10 +1,10 @@
-import { Multimedia } from "./Multimedia";
+import { IMultimedia } from "./Multimedia";
 
 
-export interface Room {
+export interface IRoom {
   roomType: string;
   occupancy: number;
-  multimedias: Multimedia[];
+  multimedias: IMultimedia[];
   facilities: string[];
   price?: number;
 }

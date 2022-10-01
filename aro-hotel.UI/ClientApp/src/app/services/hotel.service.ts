@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Hotel } from '../infrastructure/models/hotel';
+import { IHotel } from '../infrastructure/models/hotel';
 import { ApiUrls } from '../infrastructure/url';
 
 @Injectable({
@@ -11,11 +11,15 @@ export class HotelService {
 
   constructor(private http: HttpClient) { }
 
-  getHotels(): Observable<Hotel[]> {
-    return this.http.get<Hotel[]>(ApiUrls.getHotels);
+  getHotels(): Observable<IHotel[]> {
+    return this.http.get<IHotel[]>(ApiUrls.getHotels);
   }
 
-  getHotelDetails(id:number):Observable<Hotel>{
-    return this.http.get<Hotel>(`${ApiUrls.getHotels}/${id}`);
+  getHotelDetails(id: number): Observable<IHotel> {
+    return this.http.get<IHotel>(`${ApiUrls.getHotels}/${id}`);
+  }
+
+  createHotel(hotel: IHotel): Observable<any> {
+    return this.http.post(ApiUrls.createHotel, hotel);
   }
 }

@@ -1,10 +1,10 @@
 import { createAction, props } from '@ngrx/store';
-import { Hotel } from '../infrastructure/models/hotel';
+import {  IHotel } from '../infrastructure/models/hotel';
 
 export const getHotels = createAction('[App] get hotels');
 export const setHotels = createAction(
   '[App] set hotels',
-  props<{ hotels: Hotel[] }>()
+  props<{ hotels: IHotel[] }>()
 );
 
 export const getHotelDetails = createAction(
@@ -13,5 +13,10 @@ export const getHotelDetails = createAction(
 );
 export const setHotelDetails = createAction(
   '[App] set hotel details',
-  props<{ hotel: Hotel }>()
+  props<{ hotel: IHotel }>()
+);
+
+export const CreateHotel = createAction(
+  '[App] create hotel',
+  props<{ hotel: IHotel }>()
 );

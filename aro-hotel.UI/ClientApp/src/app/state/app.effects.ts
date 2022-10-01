@@ -3,7 +3,7 @@ import { HotelService } from '../services/hotel.service';
 import { createEffect, Actions, ofType } from '@ngrx/effects';
 import * as AppActions from './app.actions';
 import { exhaustMap, map } from 'rxjs';
-import { Hotel } from '../infrastructure/models/hotel';
+import { IHotel } from '../infrastructure/models/hotel';
 
 @Injectable()
 export class AppEffects {
@@ -16,7 +16,7 @@ export class AppEffects {
         this.hotelService
           .getHotels()
           .pipe(
-            map((hotels: Hotel[]) => AppActions.setHotels({ hotels: hotels }))
+            map((hotels: IHotel[]) => AppActions.setHotels({ hotels: hotels }))
           )
       )
     )
@@ -29,7 +29,20 @@ export class AppEffects {
         this.hotelService
           .getHotelDetails(action.id)
           .pipe(
-            map((hotel: Hotel) => AppActions.setHotelDetails({ hotel: hotel }))
+            map((hotel: IHotel) => AppActions.setHotelDetails({ hotel: hotel }))
+          )
+      )
+    )
+  );
+
+  createHotel$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(AppActions.CreateHotel),
+      exhaustMap((action) =>
+        this.hotelService
+          .createHotel(action.hotel)
+          .pipe(
+            map((hotel: IHotel) => AppActions.setHotelDetails({ hotel: hotel }))
           )
       )
     )

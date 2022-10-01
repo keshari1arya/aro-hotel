@@ -1,9 +1,9 @@
 import { createSelector } from '@ngrx/store';
-import { Hotel } from '../infrastructure/models/hotel';
+import { IHotel } from '../infrastructure/models/hotel';
 
 export interface IAppState {
-  hotels?: Hotel[];
-  hotelDetails?: Hotel;
+  hotels?: IHotel[];
+  hotelDetails?: IHotel;
 }
 
 export const selectAppState = (state: any) => {

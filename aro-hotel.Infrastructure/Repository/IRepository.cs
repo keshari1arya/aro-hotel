@@ -11,7 +11,7 @@ namespace aro_hotel.Infrastructure.Repository
         Task<IEnumerable<T>> FilterAsync(Expression<Func<T, bool>> expression);
         Task<IEnumerable<T>> GetAllAsync();
         Task<T> GetByIdAsync(int id);
-        Task Add(T entity);
+        Task AddAsync(T entity);
         Task SaveChangesAsync();
         Task<T> FindByConditionAsync(Expression<Func<T, bool>> predicate);
         DbSet<T> Entity();

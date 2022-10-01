@@ -21,7 +21,7 @@ namespace aro_hotel.Infrastructure.Handler.Command
         async Task<HotelResponse> IRequestHandler<CreateHotelCommand, HotelResponse>.Handle(CreateHotelCommand command, CancellationToken cancellationToken)
         {
             var hotel = this.mapper.Map<Hotel>(command.request);
-            await this.repository.Add(hotel);
+            await this.repository.AddAsync(hotel);
             await this.repository.SaveChangesAsync();
 
             return this.mapper.Map<HotelResponse>(hotel);
