@@ -17,6 +17,7 @@ namespace aro_hotel.Domain.EntityConfiguration
             builder.HasOne(x => x.RoomType)
                 .WithMany(x => x.Rooms)
                 .HasForeignKey(x => x.RoomTypeId);
+
         }
     }
 

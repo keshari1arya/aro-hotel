@@ -10,15 +10,11 @@ namespace aro_hotel.Infrastructure.DTO.Request
         public AddressRequest Address { get; set; }
     }
 
-    public class AddressRequest
+    public class MultimediaRequest
     {
-        public string Line1 { get; set; }
-        public string Line2 { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Country { get; set; }
-        public string Pincode { get; set; }
-        public string LandMark { get; set; }
+        public int HotelId { get; set; }
+        public int RoomId { get; set; }
+        public List<string> Urls { get; set; }
     }
 }
 

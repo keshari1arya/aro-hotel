@@ -20,6 +20,7 @@
     <None Remove="AutoMapper.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Handler\Command\" />
     <None Remove="DTO\Request\" />
+    <None Remove="Command\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repository\" />
@@ -31,6 +32,7 @@
     <Folder Include="MappingProfile\" />
     <Folder Include="Handler\Command\" />
     <Folder Include="DTO\Request\" />
+    <Folder Include="Command\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\aro-hotel.Domain\aro-hotel.Domain.csproj" />

@@ -2,6 +2,7 @@
 using aro_hotel.Domain.Model;
 using aro_hotel.Infrastructure.DTO.Response;
 using aro_hotel.Infrastructure.Repository;
+using aro_hotel.Infrastructure.Command;
 using AutoMapper;
 using MediatR;
 

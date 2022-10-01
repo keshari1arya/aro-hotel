@@ -4,10 +4,12 @@ import { createEffect, Actions, ofType } from '@ngrx/effects';
 import * as AppActions from './app.actions';
 import { exhaustMap, map } from 'rxjs';
 import { IHotel } from '../infrastructure/models/hotel';
+import { MultimediaService } from '../services/multimedia.service';
 
 @Injectable()
 export class AppEffects {
-  constructor(private actions$: Actions, private hotelService: HotelService) {}
+  constructor(private actions$: Actions, private hotelService: HotelService,
+    private multimediaService: MultimediaService) { }
 
   getHotels$ = createEffect(() =>
     this.actions$.pipe(
@@ -43,6 +45,22 @@ export class AppEffects {
           .createHotel(action.hotel)
           .pipe(
             map((hotel: IHotel) => AppActions.setHotelDetails({ hotel: hotel }))
+          )
+      )
+    )
+  );
+
+  uploadFiles$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(AppActions.uploadImages),
+      exhaustMap((action) =>
+        this.multimediaService
+          .upload(action.file, action.hotelId, action.roomId)
+          .pipe(
+            map((res) => {
+              console.log(res);
+              return AppActions.uploadSuccess()
+            })
           )
       )
     )

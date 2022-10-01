@@ -1,9 +1,6 @@
-﻿using System;
-using aro_hotel.Domain.Model;
-using aro_hotel.Infrastructure;
+﻿using aro_hotel.Infrastructure.Command;
 using aro_hotel.Infrastructure.DTO.Request;
 using aro_hotel.Infrastructure.Query;
-using aro_hotel.Infrastructure.Repository;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 

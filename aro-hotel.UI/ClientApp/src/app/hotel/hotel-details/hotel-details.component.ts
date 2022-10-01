@@ -7,6 +7,8 @@ import { IMultimedia } from 'src/app/infrastructure/models/Multimedia';
 import { IAppState } from 'src/app/state/app.index';
 import * as AppActions from '../../state/app.actions';
 import * as fromApp from '../../state/app.index';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { UploadMediaComponent } from '../upload-media/upload-media.component';
 
 @Component({
   selector: 'app-hotel-details',
@@ -18,7 +20,7 @@ export class HotelDetailsComponent implements OnInit {
 
   private notFoundImage = 'assets/not-found.jpeg';
 
-  constructor(private appStore: Store<IAppState>, private route: ActivatedRoute,) { }
+  constructor(private appStore: Store<IAppState>, private route: ActivatedRoute,private modalService: BsModalService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -29,5 +31,9 @@ export class HotelDetailsComponent implements OnInit {
 
   getImage(image: IMultimedia): string {
     return image?.url ?? this.notFoundImage;
+  }
+
+  openModal(): void {
+    this.modalService.show(UploadMediaComponent);
   }
 }

@@ -14,6 +14,8 @@ import { AppEffects } from './state/app.effects';
 import { EffectsModule } from '@ngrx/effects';
 import { LoaderInterceptor } from './interceptor/loader.interceptor';
 import { AddHotelComponent } from './hotel/add-hotel/add-hotel.component';
+import { UploadMediaComponent } from './hotel/upload-media/upload-media.component';
+import { ModalModule, BsModalService } from 'ngx-bootstrap/modal';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { AddHotelComponent } from './hotel/add-hotel/add-hotel.component';
     HotelListComponent,
     HotelDetailsComponent,
     AddHotelComponent,
+    UploadMediaComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -39,6 +42,7 @@ import { AddHotelComponent } from './hotel/add-hotel/add-hotel.component';
     StoreModule.forFeature('AppState', appReducer),
     EffectsModule.forFeature([AppEffects]),
     FormsModule,
+    ModalModule.forRoot(),
   ],
   providers: [
     {
@@ -46,6 +50,7 @@ import { AddHotelComponent } from './hotel/add-hotel/add-hotel.component';
       useClass: LoaderInterceptor,
       multi: true,
     },
+    BsModalService,
   ],
   bootstrap: [AppComponent],
 })

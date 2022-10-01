@@ -11,10 +11,13 @@ namespace aro_hotel.Infrastructure.MappingProfile
         public MappingProfile()
         {
             CreateMap<Hotel, HotelResponse>()
-                .ForMember(x => x.Facilities, con => con.MapFrom(x => x.HotelFacilityXREFs.Select(x => x.Facility.Name).ToList()));
+                .ForMember(x => x.Facilities, con => con.MapFrom(x => x.HotelFacilityXREFs.Select(x => x.Facility.Name).ToList()))
+                .ForMember(x => x.Multimedias, con => con.MapFrom(x => x.HotelMultimediaXREFs.Select(x => x.Multimedia).ToList()));
+
             CreateMap<Address, AddressResponse>();
             CreateMap<Multimedia, MultimediaResponse>();
             CreateMap<Room, RoomResponse>()
+                .ForMember(x => x.Multimedias, con => con.MapFrom(x => x.RoomMultimediaXREFs.Select(x => x.Multimedia).ToList()))
                 .ForMember(de => de.RoomType, con => con.MapFrom(src => src.RoomType.Type))
                 .ForMember(x => x.Facilities, con => con.MapFrom(x => x.RoomFacilityXREFs.Select(x => x.Facility.Name).ToList()));
 

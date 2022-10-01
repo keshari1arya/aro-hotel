@@ -22,7 +22,9 @@ namespace aro_hotel.Infrastructure.Handler.Query
 
         public async Task<List<HotelResponse>> Handle(GetHotelsQuery request, CancellationToken cancellationToken)
         {
-            var hotels = await this.repository.Entity().Include(x => x.Address).Include(x => x.Multimedias).AsNoTracking().ToListAsync();
+            var hotels = await this.repository.Entity().Include(x => x.Address)
+                .Include(x => x.HotelMultimediaXREFs)
+                .ThenInclude(x => x.Multimedia).AsNoTracking().ToListAsync();
             return this.mapper.Map<List<HotelResponse>>(hotels);
         }
     }
