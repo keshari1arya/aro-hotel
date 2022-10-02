@@ -23,7 +23,7 @@ namespace aro_hotel.UI.Controllers
         }
 
         [HttpPost("upload")]
-        public async Task<IActionResult> Upload([FromForm] List<IFormFile> files, [FromForm] int? hotelId, [FromForm] int? roomId)
+        public async Task<IActionResult> Upload([FromForm] int? hotelId, [FromForm] int? roomId)
         {
             var request = new MultimediaRequest
             {

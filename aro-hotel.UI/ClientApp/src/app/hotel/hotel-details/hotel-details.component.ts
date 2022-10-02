@@ -19,11 +19,13 @@ export class HotelDetailsComponent implements OnInit {
   hotel$?: Observable<IHotel | undefined>;
 
   private notFoundImage = 'assets/not-found.jpeg';
+  private currentId: string;
 
-  constructor(private appStore: Store<IAppState>, private route: ActivatedRoute,private modalService: BsModalService) { }
+  constructor(private appStore: Store<IAppState>, private route: ActivatedRoute, private modalService: BsModalService) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
+      this.currentId = params['id'];
       this.appStore.dispatch(AppActions.getHotelDetails({ id: params.id }));
     });
     this.hotel$ = this.appStore.pipe(select(fromApp.selectHotelDetails));
@@ -34,6 +36,6 @@ export class HotelDetailsComponent implements OnInit {
   }
 
   openModal(): void {
-    this.modalService.show(UploadMediaComponent);
+    this.modalService.show(UploadMediaComponent, { initialState: { id: this.currentId } });
   }
 }

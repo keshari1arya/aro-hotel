@@ -59,7 +59,7 @@ export class AppEffects {
           .pipe(
             map((res) => {
               console.log(res);
-              return AppActions.uploadSuccess()
+              return AppActions.getHotelDetails({ id: +action.hotelId })
             })
           )
       )
